@@ -13,6 +13,7 @@ async function init() {
   const app = express();
 
   app.get("/get", async (req, res) => {
+    console.log({req})
     const db = await client.db("adoption");
     const collection = db.collection("pets");
 
